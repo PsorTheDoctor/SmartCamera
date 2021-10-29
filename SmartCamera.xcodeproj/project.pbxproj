@@ -16,6 +16,7 @@
 		CE0A54AD272CABEF00778640 /* SmartCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54AC272CABEF00778640 /* SmartCameraTests.swift */; };
 		CE0A54B7272CABEF00778640 /* SmartCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54B6272CABEF00778640 /* SmartCameraUITests.swift */; };
 		CE0A54B9272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */; };
+		CE0A54C6272CAD9B00778640 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CE0A54B2272CABEF00778640 /* SmartCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0A54B6272CABEF00778640 /* SmartCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCameraUITests.swift; sourceTree = "<group>"; };
 		CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCameraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		CE0A5494272CABED00778640 /* SmartCamera */ = {
 			isa = PBXGroup;
 			children = (
+				CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */,
 				CE0A5495272CABED00778640 /* AppDelegate.swift */,
 				CE0A5497272CABED00778640 /* SceneDelegate.swift */,
 				CE0A5499272CABED00778640 /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				CE0A549A272CABED00778640 /* ViewController.swift in Sources */,
 				CE0A5496272CABED00778640 /* AppDelegate.swift in Sources */,
 				CE0A5498272CABED00778640 /* SceneDelegate.swift in Sources */,
+				CE0A54C6272CAD9B00778640 /* SqueezeNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,11 +446,13 @@
 				DEVELOPMENT_TEAM = CV9R6U5W9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allows device to use a camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,11 +476,13 @@
 				DEVELOPMENT_TEAM = CV9R6U5W9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allows device to use a camera.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
