@@ -17,6 +17,7 @@
 		CE0A54B7272CABEF00778640 /* SmartCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54B6272CABEF00778640 /* SmartCameraUITests.swift */; };
 		CE0A54B9272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */; };
 		CE0A54C6272CAD9B00778640 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */; };
+		CEB80F1D272DF28F006C9516 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB80F1C272DF28F006C9516 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE0A54B6272CABEF00778640 /* SmartCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCameraUITests.swift; sourceTree = "<group>"; };
 		CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCameraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		CEB80F1C272DF28F006C9516 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		CE0A5494272CABED00778640 /* SmartCamera */ = {
 			isa = PBXGroup;
 			children = (
+				CEB80F1C272DF28F006C9516 /* Resnet50.mlmodel */,
 				CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */,
 				CE0A5495272CABED00778640 /* AppDelegate.swift */,
 				CE0A5497272CABED00778640 /* SceneDelegate.swift */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB80F1D272DF28F006C9516 /* Resnet50.mlmodel in Sources */,
 				CE0A549A272CABED00778640 /* ViewController.swift in Sources */,
 				CE0A5496272CABED00778640 /* AppDelegate.swift in Sources */,
 				CE0A5498272CABED00778640 /* SceneDelegate.swift in Sources */,
