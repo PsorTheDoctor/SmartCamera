@@ -13,6 +13,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     @IBOutlet var label: UILabel!
     
+    // let screenWidth = UIScreen.main.bounds.width
+    let rect = UIView(frame: CGRect(x: 0, y: 80, width: 10, height: 10))
+    
     let accuracy = Float(0.5)
     let defaultText = "Point the camera at an object..."
     
@@ -21,6 +24,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
         label.text = defaultText
         setupSession()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        rect.backgroundColor = .green
+        view.addSubview(rect)
     }
     
     func setupSession() {
@@ -63,8 +73,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     self.speak(text: identifier)
                     self.label.text = "\(identifier)"
                     // self.view.backgroundColor = UIColor(red: 0, green: CGFloat(confidence * 255), blue: 0, alpha: 0.1)
+                    self.animate()
                 } else {
                     // self.view.backgroundColor = .black
+                    self.unanimate()
                 }
             }
         }
@@ -77,5 +89,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let utterence = AVSpeechUtterance(string: text)
         utterence.voice = AVSpeechSynthesisVoice(language: "en-US")
         synthesizer.speak(utterence)
+    }
+    
+    @objc func animate() {
+        UIView.animate(withDuration: 1, animations: {
+            self.rect.frame = CGRect(x: 0, y: 80, width: UIScreen.main.bounds.width, height: 10)
+        })
+    }
+    
+    @objc func unanimate() {
+        UIView.animate(withDuration: 1, animations: {
+            self.rect.frame = CGRect(x: 0, y: 80, width: 10, height: 10)
+        })
     }
 }
