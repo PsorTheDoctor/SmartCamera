@@ -13,11 +13,18 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 
     @IBOutlet var label: UILabel!
 
-    // let screenWidth = UIScreen.main.bounds.width
-    let rect = UIView(frame: CGRect(x: 0, y: 80, width: 10, height: 10))
-
     let accuracy = Float(0.5)
     let defaultText = "Point the camera at an object..."
+    
+    let screenWidth = Int(UIScreen.main.bounds.width)
+    let thickness = 10
+    
+    let topLeft = UIView(frame: CGRect(x: Int(UIScreen.main.bounds.width / 2), y: 80, width: 0, height: 10))
+    let topRight = UIView(frame: CGRect(x: Int(UIScreen.main.bounds.width / 2), y: 80, width: 0, height: 10))
+    let left = UIView(frame: CGRect(x: 0, y: 80, width: 10, height: 0))
+    let right = UIView(frame: CGRect(x: UIScreen.main.bounds.width, y: 80, width: 10, height: 0))
+    let bottomLeft = UIView(frame: CGRect(x: 0, y: 500, width: 0, height: 10))
+    let bottomRight = UIView(frame: CGRect(x: UIScreen.main.bounds.width, y: 500, width: 0, height: 10))
 
     override func viewDidLoad() {
 
@@ -29,8 +36,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     override func viewDidLayoutSubviews() {
 
         super.viewDidLayoutSubviews()
-        rect.backgroundColor = .green
-        view.addSubview(rect)
+        
+        let shapes = [topLeft, topRight, right, left, bottomLeft, bottomRight]
+        
+        for shape in shapes {
+            shape.backgroundColor = .systemMint
+            view.addSubview(shape)
+        }
     }
 
     func setupSession() {
@@ -92,14 +104,41 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
 
     @objc func animate() {
+        
         UIView.animate(withDuration: 1, animations: {
-            self.rect.frame = CGRect(x: 0, y: 80, width: UIScreen.main.bounds.width, height: 10)
+            self.topLeft.frame = CGRect(x: 0, y: 80,
+                                        width: Int(self.screenWidth / 2),
+                                        height: self.thickness)
+            
+            self.topRight.frame = CGRect(x: Int(self.screenWidth / 2), y: 80,
+                                         width: Int(self.screenWidth / 2),
+                                         height: self.thickness)
+            
+            self.left.frame = CGRect(x: 0, y: 80,
+                                     width: self.thickness, height: 500)
+            
+            self.right.frame = CGRect(x: self.screenWidth - self.thickness, y: 80,
+                                      width: self.thickness, height: 500)
+            
+            self.bottomLeft.frame = CGRect(x: 0, y: 580,
+                                           width: Int(self.screenWidth / 2),
+                                           height: self.thickness)
+            
+            self.bottomRight.frame = CGRect(x: Int(self.screenWidth / 2), y: 580,
+                                            width: Int(self.screenWidth / 2),
+                                            height: self.thickness)
         })
     }
 
     @objc func unanimate() {
-        UIView.animate(withDuration: 1, animations: {
-            self.rect.frame = CGRect(x: 0, y: 80, width: 10, height: 10)
+        
+        UIView.animate(withDuration: 0, animations: {
+            self.topLeft.frame = CGRect(x: Int(UIScreen.main.bounds.width / 2), y: 80, width: 0, height: 10)
+            self.topRight.frame = CGRect(x: Int(UIScreen.main.bounds.width / 2), y: 80, width: 0, height: 10)
+            self.left.frame = CGRect(x: 0, y: 80, width: 10, height: 0)
+            self.right.frame = CGRect(x: UIScreen.main.bounds.width, y: 80, width: 10, height: 0)
+            self.bottomLeft.frame = CGRect(x: 0, y: 500, width: 0, height: 10)
+            self.bottomRight.frame = CGRect(x: UIScreen.main.bounds.width, y: 500, width: 0, height: 10)
         })
     }
 }

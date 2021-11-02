@@ -7,9 +7,17 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UISearchResultsUpdating {
+    
+    let SearchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SearchController.searchResultsUpdater = self
+        navigationItem.searchController = SearchController
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        // guard let text = searchController.searchBar.text else { return }
     }
 }
