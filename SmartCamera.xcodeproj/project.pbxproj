@@ -18,6 +18,9 @@
 		CE0A54B9272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */; };
 		CE0A54C6272CAD9B00778640 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */; };
 		CEB80F1D272DF28F006C9516 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB80F1C272DF28F006C9516 /* Resnet50.mlmodel */; };
+		CEEF42742730982F008EEE8A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF42732730982F008EEE8A /* HomeViewController.swift */; };
+		CEEF427627309942008EEE8A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF427527309942008EEE8A /* CameraViewController.swift */; };
+		CEEF42782730995F008EEE8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF42772730995F008EEE8A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		CE0A54B8272CABEF00778640 /* SmartCameraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartCameraUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE0A54C5272CAD9B00778640 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		CEB80F1C272DF28F006C9516 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		CEEF42732730982F008EEE8A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEEF427527309942008EEE8A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CEEF42772730995F008EEE8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				CE0A549E272CABEE00778640 /* Assets.xcassets */,
 				CE0A54A0272CABEE00778640 /* LaunchScreen.storyboard */,
 				CE0A54A3272CABEE00778640 /* Info.plist */,
+				CEEF42732730982F008EEE8A /* HomeViewController.swift */,
+				CEEF427527309942008EEE8A /* CameraViewController.swift */,
+				CEEF42772730995F008EEE8A /* SettingsViewController.swift */,
 			);
 			path = SmartCamera;
 			sourceTree = "<group>";
@@ -268,7 +277,10 @@
 				CE0A549A272CABED00778640 /* ViewController.swift in Sources */,
 				CE0A5496272CABED00778640 /* AppDelegate.swift in Sources */,
 				CE0A5498272CABED00778640 /* SceneDelegate.swift in Sources */,
+				CEEF427627309942008EEE8A /* CameraViewController.swift in Sources */,
 				CE0A54C6272CAD9B00778640 /* SqueezeNet.mlmodel in Sources */,
+				CEEF42742730982F008EEE8A /* HomeViewController.swift in Sources */,
+				CEEF42782730995F008EEE8A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
