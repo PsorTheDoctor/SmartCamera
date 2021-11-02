@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="VgR-oi-l2H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="8NV-SQ-dM8"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="8NV-SQ-dM8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzP-Gs-bR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="Sa7-9o-OBb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" id="zCZ-8A-5fU"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="circle" catalog="system" id="zCZ-8A-5fU"/>
                     <connections>
                         <outlet property="label" destination="BiG-CF-ekU" id="B1h-Yv-8di"/>
                     </connections>
@@ -63,7 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="s6L-iK-jyu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="Ymz-km-tUc"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="Ymz-km-tUc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggg-l6-KNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +90,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
